@@ -7,12 +7,13 @@
     <%= text_field_tag(:name, nil, id: "new-repo") %>
     <%= submit_tag("Create") %>
   <% end %>
-</div>
-
 
 <% @usernames_repos.each do |repo| %>
-
+  <li>
   <%= repo['name'] %>
-
+  <a href=<%=repo['html_url']%>><%=repo['html_url']%></a>
+  </li>
 <% end %>
+
+</div>
 
